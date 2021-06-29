@@ -1,7 +1,7 @@
 const express = require('express');
 const searchRouter = express.Router();
 
-searchRouter.get('/', (res, req) => {
+searchRouter.get('/', (req, res) => {
 	res.send({ message: '/search endpoint' });
 });
 
