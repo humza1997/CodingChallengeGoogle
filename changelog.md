@@ -44,8 +44,8 @@ api endpoints:
 
 ### Backend
 
-    []  create basic api
-    []  create / endpoint
+    [X]  create basic api
+    [X]  create / endpoint
     []  stub /search endpoint
 
 ## changes
@@ -53,3 +53,6 @@ api endpoints:
 ### Frontend
 
 ### Backend
+
+-   create initial files, dependencies.
+-   create GET `/` end point
