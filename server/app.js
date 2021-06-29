@@ -8,8 +8,13 @@ app.use(cors());
 app.use(morgan('short'));
 app.use(express.json());
 
+// root GET
 app.get('/', (req, res) => {
 	res.send({ message: 'Hello World!' });
 });
+
+// search endpoint
+const searchRouter = require('./controllers/search');
+app.use('/search', searchRouter);
 
 module.exports = app;
