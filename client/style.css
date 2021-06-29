@@ -1,0 +1,58 @@
+header, footer, main, #logo, #searchBar, #info, #otherInfo, #break, #carbon, #country{
+    border: 2px solid gray;
+    margin: 2px;
+    box-sizing: border-box;
+    /* justify-content: center; */
+}
+
+*{box-sizing: border-box;}
+   
+header{grid-area: head;}
+footer{grid-area: foot;}
+main{grid-area: main;}
+#logo{grid-area: logo;}
+#searchBar{grid-area: sb;}
+#info{grid-area: info;}
+#otherInfo{grid-area: otherInfo;}
+#break{grid-area: break;}
+#country{grid-area: country;}
+#carbon{grid-area: carbon;}
+
+#logo{
+    
+}
+
+
+body{
+    display:grid;
+    height:100vh;
+    width:100vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8% 1fr 15% ;
+    grid-template-areas: "head"
+                        "main"
+                        "foot";
+}
+
+main{
+    display: grid;
+    height:100%;
+    width:100vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 15% 1fr;
+    grid-template-areas: "logo"
+                        "sb"
+                        "break";
+}
+
+footer{
+    display: grid;
+    height:100%;
+    width:100vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1r;
+    grid-template-areas: "country country"
+                        "carbon carbon"
+                        "info otherInfo";
+
+}
