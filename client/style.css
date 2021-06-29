@@ -62,20 +62,28 @@ footer{
                         "carbon carbon"
                         "info otherInfo";
     text-align: center;
-    background-color: rgb(177, 177, 177);
+    background-color: rgb(233, 233, 233);
     color: grey;
 
 }
+
+
 
 ul {
     list-style-type: none;
     overflow: hidden;
   }
 
-li {
+header li {
     float: right;
   }
 
+footer ul { background-color: rgb(233, 233, 233)}
+
+footer li {
+    display: inline;
+
+}
 
 
   li a {
