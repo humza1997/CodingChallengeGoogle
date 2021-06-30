@@ -1,8 +1,8 @@
-header, footer, main, #logo, #searchBar, #info, #otherInfo, #break, #carbon, #country{
-    /* border: 2px solid gray; */
-    /* margin: 2px; */
+header, footer, main, aside, #logo, #searchBar, #info, #otherInfo, #break, #carbon, #country #signIn{
+    border: 2px solid gray;
+    margin: 2px;
     box-sizing: border-box;
-    /* justify-content: center; */
+    justify-content: center;
 }
 
 *{box-sizing: border-box;}
@@ -17,57 +17,42 @@ main{grid-area: main;}
 #break{grid-area: break;}
 #country{grid-area: country;}
 #carbon{grid-area: carbon;}
+#signIn{grid-area: sign;}
+aside{grid-area: aside;}
 
 #googleLogo{
+    height:5vh;
+    width:10%;
     display: block;
-    margin-left: auto;
     margin-right: auto;  
     /* margin-top:200px;
     margin-bottom:20px; */
 
 }
 
+header{
+    display: inline-block;
+}
+
 
 body{
     display:grid;
-    height:100vh;
+    /* height:100; */
     width:100vw;
-    grid-template-columns: 1fr;
-    grid-template-rows: 8% 1fr 15% ;
-    grid-template-areas: "head"
-                        "main"
-                        "foot";
-}
-
-main{
-    display: grid;
-    height:100%;
-    width:100vw;
-    grid-template-columns: 1fr;
-    grid-template-rows: 40% 30% 1fr;
-    grid-template-areas: "logo"
-                        "sb"
-                        "break";
-                    
+    grid-template-columns: 10% 40% 1fr;
+    grid-template-rows: 15vh 1fr 15vh ;
+    grid-template-areas: "logo sb sign"
+                        "aside main aside"
+                        "foot foot foot";
 }
 
 
-footer{
-    display: grid;
-    height:100%;
-    width:100vw;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1r;
-    grid-template-areas: "country country"
-                        "carbon carbon"
-                        "info otherInfo";
-    text-align: center;
-    background-color: rgb(233, 233, 233);
-    color: grey;
-
+#topRight{
+     display: inline-block;
+    position: absolute;
+    right:0px;
+    top:0px
 }
-
-
 
 ul {
     list-style-type: none;
@@ -115,7 +100,7 @@ footer li {
 
 
   .bar{
-    margin:0 auto;
+    /* margin:0 auto; */
     width:575px;
     border-radius:30px;
     border:1px solid #dcdcdc;
