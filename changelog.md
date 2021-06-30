@@ -42,7 +42,7 @@ api endpoints:
     [X]  fetch search results from backend
     [X]  stub results page
     []  impliment search buttons functionality
-    []  style footer
+    [X]  style footer
     []  add non dead links to homepage
     []  style results page
 
