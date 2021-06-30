@@ -1,5 +1,3 @@
-const url = "http://localhost:5000/search?search=pie";
-
 function createUrlQuery() {
   const query = window.location.href.split("???")[1];
   const url = `http://localhost:5000/search?search=${query}`;
@@ -42,3 +40,14 @@ async function appendResultsToMain() {
 }
 
 appendResultsToMain();
+
+let form = document.querySelector("form");
+
+form.addEventListener("submit", redirectToResults);
+
+function redirectToResults(e) {
+  e.preventDefault(e);
+  const query = e.target[0].value;
+  const newUrl = `http://localhost:3000/resultPage.html???${query}`;
+  window.location.href = newUrl;
+}
