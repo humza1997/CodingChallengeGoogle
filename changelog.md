@@ -37,16 +37,26 @@ api endpoints:
 
 ### Frontend
 
-    []  create basic homepage
-    []  create form for search bar
-    []  fetch search results from backend
-    []  stub results page
+    [X]  create basic homepage
+    [X]  create form for search bar
+    [X]  fetch search results from backend
+    [X]  stub results page
+    []  impliment search buttons functionality
+    [X]  style footer
+    []  add non dead links to homepage
+    []  style results page
 
 ### Backend
 
     [X]  create basic api
     [X]  create / endpoint
-    []  stub /search endpoint
+    [X]  stub /search endpoint
+    []   write more test
+
+### Misc
+
+    [X]  write readme
+    []  update changelog
 
 ## changes
 
@@ -56,3 +66,5 @@ api endpoints:
 
 -   create initial files, dependencies.
 -   create GET `/` end point
+-   create GET `/search` using `express.Router()`
+-   create `search.js` model using `npm google-it` module
