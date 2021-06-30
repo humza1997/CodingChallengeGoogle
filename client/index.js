@@ -24,3 +24,23 @@ function redirectToResults(e) {
 	const newUrl = `${currentUrl}resultPage.html???${query}`;
 	window.location.href = newUrl;
 }
+
+let googleSearch = document.getElementById('googleSearch')
+
+googleSearch.addEventListener('click', handleGoogleSearchButtonClick);
+
+
+function handleGoogleSearchButtonClick(){
+	let input = document.querySelector('input');
+	let query = input.value;
+	const currentUrl = window.location.href;
+	const newUrl = `${currentUrl}resultPage.html???${query}`;
+	window.location.href = newUrl;
+
+
+}
+
+//grab input from form
+//extract value from input
+//create new url from that value
+//redirect to url
