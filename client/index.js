@@ -1,8 +1,3 @@
-function createUrlQuery(query) {
-  const url = `http://localhost:5000/search?search=${query}`;
-  return url;
-}
-
 let form = document.querySelector("form");
 
 form.addEventListener("submit", redirectToResults);
@@ -50,4 +45,15 @@ async function fetchData(query) {
     .then((res) => res.json())
     .catch(console.error);
   return fetchResults;
+}
+
+let searchButton = document.getElementById("searchButton");
+
+searchButton.addEventListener("click", handleGoogleSearchButtonClick);
+function handleGoogleSearchButtonClick() {
+  let input = document.querySelector("input");
+  let query = input.value;
+  const currentUrl = window.location.href;
+  const newUrl = `http://localhost:3000/resultPage.html???${query}`;
+  window.location.href = newUrl;
 }
