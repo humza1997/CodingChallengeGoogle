@@ -1,156 +1,188 @@
-header, footer, main, aside, #logo, #searchBar, #info, #otherInfo, #break, #carbon, #country #signIn{
-    border: 2px solid gray;
-    margin: 2px;
-    box-sizing: border-box;
-    justify-content: center;
+header,
+footer,
+main,
+aside,
+#logo,
+#searchBar,
+#info,
+#otherInfo,
+#break,
+#carbon,
+#country #signIn {
+	border: 2px solid gray;
+	margin: 2px;
+	box-sizing: border-box;
+	justify-content: center;
 }
 
-*{box-sizing: border-box;}
-   
-header{grid-area: head;}
-footer{grid-area: foot;}
-main{grid-area: main;}
-#logo{grid-area: logo;}
-#searchBar{grid-area: sb;}
-#info{grid-area: info;}
-#otherInfo{grid-area: otherInfo;}
-#break{grid-area: break;}
-#country{grid-area: country;}
-#carbon{grid-area: carbon;}
-#signIn{grid-area: sign;}
-aside{grid-area: aside;}
+* {
+	box-sizing: border-box;
+}
 
-#googleLogo{
-    height:5vh;
-    width:10%;
-    display: block;
-    margin-right: auto;  
-    /* margin-top:200px;
+/* header{grid-area: head;} */
+#logo {
+	grid-area: logo;
+}
+#searchBar {
+	grid-area: sb;
+}
+#signIn {
+	grid-area: sign;
+}
+#filler {
+	grid-area: filler;
+}
+main {
+	grid-area: main;
+}
+aside {
+	grid-area: aside;
+}
+#info {
+	grid-area: info;
+}
+#otherInfo {
+	grid-area: otherInfo;
+}
+#break {
+	grid-area: break;
+}
+#country {
+	grid-area: country;
+}
+#carbon {
+	grid-area: carbon;
+}
+footer {
+	grid-area: foot;
+}
+
+#googleLogo {
+	height: 5vh;
+	/* width: 10%; */
+	display: block;
+	margin-right: auto;
+	/* margin-top:200px;
     margin-bottom:20px; */
-
 }
 
-header{
-    display: inline-block;
+header {
+	display: inline-block;
 }
 
-
-body{
-    display:grid;
-    /* height:100; */
-    width:100vw;
-    grid-template-columns: 10% 40% 1fr;
-    grid-template-rows: 15vh 1fr 15vh ;
-    grid-template-areas: "logo sb sign"
-                        "aside main aside"
-                        "foot foot foot";
+body {
+	display: grid;
+	/* height:100; */
+	width: 100vw;
+	grid-template-columns: 10% 50% 1fr;
+	grid-template-rows: 15vh auto 15vh;
+	grid-template-areas:
+		'logo sb sign'
+		'filler main aside'
+		'foot foot foot';
 }
 
-
-#topRight{
-     display: inline-block;
-    position: absolute;
-    right:0px;
-    top:0px
+#topRight {
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	top: 0px;
 }
 
 ul {
-    list-style-type: none;
-    overflow: hidden;
-  }
-
-header li {
-    float: right;
-  }
-
-footer ul { background-color: rgb(233, 233, 233)}
-
-footer li {
-    display: inline;
-
+	list-style-type: none;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row-reverse;
 }
 
+header li {
+	float: right;
+}
 
-  li a {
-    color: #000;
-    display: block;
-    text-align: center;
-    padding: 10px 10px;
-    text-decoration: none;
-    font-size:14px;
-  }
-  li a:hover {
-    text-decoration: underline;
-  }
-  .grid{
-    height:23px;
-    position:relative;
-    bottom:4px;
-  }
-  .signbutton{
-    background-color: #4885ed;
-    color: #fff;
-    border:none;
-    border-radius:3px;
-    padding:7px 10px;
-    position:relative;
-    bottom:7px;
-    font-weight:bold;
-  }
+footer ul {
+	background-color: rgb(233, 233, 233);
+}
 
+footer li {
+	display: inline;
+}
 
-  .bar{
-    /* margin:0 auto; */
-    width:575px;
-    border-radius:30px;
-    border:1px solid #dcdcdc;
-  }
-  .bar:hover{
-    box-shadow: 1px 1px 8px 1px #dcdcdc;
-  }
-  .bar:focus-within{
-    box-shadow: 1px 1px 8px 1px #dcdcdc;
-    outline:none;
-  }
-  .searchbar{
-    height:45px;
-    border:none;
-    width:500px;
-    font-size:16px;
-    outline: none;
-    
-  }
-  .voice{
-    height:20px;
-    position:relative;
-    top:5px;
-    left:10px;
-  }
+li a {
+	color: #000;
+	display: block;
+	text-align: center;
+	padding: 10px 10px;
+	text-decoration: none;
+	font-size: 14px;
+}
+li a:hover {
+	text-decoration: underline;
+}
+.grid {
+	height: 23px;
+	position: relative;
+	bottom: 4px;
+}
+.signbutton {
+	background-color: #4885ed;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	padding: 7px 10px;
+	position: relative;
+	bottom: 7px;
+	font-weight: bold;
+}
 
+.bar {
+	/* margin:0 auto; */
+	width: 575px;
+	border-radius: 30px;
+	border: 1px solid #dcdcdc;
+}
+.bar:hover {
+	box-shadow: 1px 1px 8px 1px #dcdcdc;
+}
+.bar:focus-within {
+	box-shadow: 1px 1px 8px 1px #dcdcdc;
+	outline: none;
+}
+.searchbar {
+	height: 45px;
+	border: none;
+	width: 500px;
+	font-size: 16px;
+	outline: none;
+}
+.voice {
+	height: 20px;
+	position: relative;
+	top: 5px;
+	left: 10px;
+}
 
-  .buttons{
-    margin-top:30px;   text-align: center;
-    
-  }
-  .button{
-    background-color: #f5f5f5;
-    border:none;
-    color:#707070;
-    font-size:15px;
-    padding: 10px 20px;
-    margin:5px;
-    border-radius:4px;
-    outline:none;
-    text-align: center;
- 
-  }
-  .button:hover{
-    border: 1px solid #c8c8c8;
-    padding: 9px 19px;
-    color:#808080;
-  }
-  .button:focus{
-    border:1px solid #4885ed;
-    padding: 9px 19px;
-  }
-  
+.buttons {
+	margin-top: 30px;
+	text-align: center;
+}
+.button {
+	background-color: #f5f5f5;
+	border: none;
+	color: #707070;
+	font-size: 15px;
+	padding: 10px 20px;
+	margin: 5px;
+	border-radius: 4px;
+	outline: none;
+	text-align: center;
+}
+.button:hover {
+	border: 1px solid #c8c8c8;
+	padding: 9px 19px;
+	color: #808080;
+}
+.button:focus {
+	border: 1px solid #4885ed;
+	padding: 9px 19px;
+}
