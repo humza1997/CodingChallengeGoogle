@@ -1,5 +1,3 @@
-const url = 'http://localhost:5000/search?search=pie';
-
 function createUrlQuery(query) {
 	const url = `http://localhost:5000/search?search=${query}`;
 	return url;
@@ -17,14 +15,12 @@ function fetchData(e) {
 
 let form = document.querySelector('form');
 
-form.addEventListener('submit', fetchData);
+form.addEventListener('submit', redirectToResults);
 
-// grab main to append to
-// store fetched data somehow
-// data has link, snippet, title
-
-// iterate over data:
-
-// create a div with 3 p's in
-// map link snippet, title to one p each
-// append to main
+function redirectToResults(e) {
+	e.preventDefault(e);
+	const query = e.target[0].value;
+	const currentUrl = window.location.href;
+	const newUrl = `${currentUrl}resultPage.html???${query}`;
+	window.location.href = newUrl;
+}
