@@ -1,8 +1,8 @@
-header, footer, main, #logo, #searchBar, #info, #otherInfo, #break, #carbon, #country{
-    /* border: 2px solid gray; */
-    /* margin: 2px; */
+header, footer, main, aside, #logo, #searchBar, #info, #otherInfo, #break, #carbon, #country #signIn{
+    border: 2px solid gray;
+    margin: 2px;
     box-sizing: border-box;
-    /* justify-content: center; */
+    justify-content: center;
 }
 
 *{box-sizing: border-box;}
@@ -17,6 +17,8 @@ main{grid-area: main;}
 #break{grid-area: break;}
 #country{grid-area: country;}
 #carbon{grid-area: carbon;}
+#signIn{grid-area: sign;}
+aside{grid-area: aside;}
 
 #googleLogo{
     height:5vh;
@@ -31,15 +33,17 @@ main{grid-area: main;}
 header{
     display: inline-block;
 }
+
+
 body{
     display:grid;
-    height:100vh;
+    /* height:100; */
     width:100vw;
-    grid-template-columns: 1fr;
-    grid-template-rows: 15% 1fr 15% ;
-    grid-template-areas: "head"
-                        "main"
-                        "foot";
+    grid-template-columns: 10% 40% 1fr;
+    grid-template-rows: 15vh 1fr 15vh ;
+    grid-template-areas: "logo sb sign"
+                        "aside main aside"
+                        "foot foot foot";
 }
 
 
