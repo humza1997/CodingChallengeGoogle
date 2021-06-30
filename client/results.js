@@ -62,3 +62,11 @@ function handleGoogleSearchButtonClick() {
   const newUrl = `http://localhost:3000/resultPage.html???${query}`;
   window.location.href = newUrl;
 }
+
+let homeButton = document.getElementById("googleLogo");
+
+homeButton.addEventListener("click", goHome);
+
+function goHome() {
+  window.location.href = "http://localhost:3000/";
+}
