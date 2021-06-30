@@ -38,7 +38,35 @@ function handleGoogleSearchButtonClick(){
 	window.location.href = newUrl;
 }
 
-//grab input from form
-//extract value from input
-//create new url from that value
-//redirect to url
+let imFeelingLuckyButton = document.getElementById('imFeelingLuckyButton');
+
+imFeelingLuckyButton.addEventListener('click', imFeelingLucky);
+
+async function imFeelingLucky(){
+	let input = document.querySelector('input');
+	let query = input.value;
+	let fetchedData = await fetchData(query);
+	let link = fetchedData.results[0].link
+	window.location.href = link
+
+}
+
+function createUrlQuery(query) {
+	const url = `http://localhost:5000/search?search=${query}`;
+	return url;
+}
+
+async function fetchData(query) {
+	const url = createUrlQuery(query);
+	const fetchResults = await fetch(url)
+		.then((res) => res.json())
+		.catch(console.error);
+	return fetchResults;
+}
+
+//grab the button
+//on click run a function 
+//function should extract value from input
+// fetch data based on query
+// redirect to the link of the first result
+// IMFEELINGLUCKy
