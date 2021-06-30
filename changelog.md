@@ -55,7 +55,7 @@ api endpoints:
 
 ### Misc
 
-    []  write readme
+    [X]  write readme
     []  update changelog
 
 ## changes
@@ -66,3 +66,5 @@ api endpoints:
 
 -   create initial files, dependencies.
 -   create GET `/` end point
+-   create GET `/search` using `express.Router()`
+-   create `search.js` model using `npm google-it` module
