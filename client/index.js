@@ -36,8 +36,6 @@ function handleGoogleSearchButtonClick(){
 	const currentUrl = window.location.href;
 	const newUrl = `${currentUrl}resultPage.html???${query}`;
 	window.location.href = newUrl;
-
-
 }
 
 //grab input from form

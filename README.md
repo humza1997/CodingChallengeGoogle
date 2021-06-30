@@ -14,12 +14,16 @@ The project is a simple clone of the google home and results pages.
 
 -   clone or download the repo.
 -   open terminal and navigate to `server` folder.
--   Run `npm install` to install dependecies.
+-   Run `npm install` to install server dependecies.
+-   open terminal and navigate to `client` folder.
+-   Run `npm install` to install client dependecies.
+
 
 ### Usage
 
 -   Run `npm start` to launch the server.
--   Open `index.html` in the browser.
+-   Run `npm start` to launch the client.
+
 
 ## Technologies
 
